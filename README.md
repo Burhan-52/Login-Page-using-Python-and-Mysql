@@ -1,4 +1,4 @@
-# login.py
+# Login-Page using Python and Mysql
 
 It's a GUI project using python tkinter and MySQL database.
 
