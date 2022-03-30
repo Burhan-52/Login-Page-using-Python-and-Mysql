@@ -23,11 +23,11 @@ def login():
     print(user.get())
     print(pas.get())
 
-    mydb = mysql.connector.connect(host="Type_your_localhost", user="Type_your_user", passwd="Type_your_password", database="Type_your_dataname")
+    mydb = mysql.connector.connect(host="Type_your_localhost", user="Type_your_user", passwd="Type_your_password", database="Login")
     mycursor = mydb.cursor()
 
     try:
-        sql = "INSERT INTO login(dates,times,username,passwords) VALUES(%s,%s,%s,%s)"
+        sql = "INSERT INTO log(dates,times,username,passwords) VALUES(%s,%s,%s,%s)"
         val = (formatted_date,formatted_time,user.get(),pas.get())
         mycursor.execute(sql,val)
         mydb.commit()
